@@ -9,15 +9,11 @@ const data = [
 ];
 
 function Cards(props) {
-  // const fetchFunc = () => {
-  //   const res = fetch("https://jsonplaceholder.typicode.com/photos")
-  //   .then((res) => res.json())
-  //   .then((res) => console.log(res))
-  //   .catch((err) => console.error(err));
-  // }
-
   // useEffect(() => {
-  //   fetchFunc()
+  //   fetch("https://jsonplaceholder.typicode.com/photos")
+  //   .then((res) => res.json())
+  //   .then((data) => console.log(data))
+  //   .catch((err) => console.error(err));
   // })
 
   const addToFavorite = (item, key) => {
