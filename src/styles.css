@@ -1,0 +1,25 @@
+.App {
+  background-color: lightgrey;
+}
+
+/* Cards */
+
+.cards {
+  flex-flow: wrap;
+}
+
+.cards-items {
+  width: 450px;
+  height: 200px;
+  border: 1px solid #fff;
+  background: #222326;
+  color: #fff;
+  border-radius: 10px;
+  text-align: center;
+  margin: 3rem auto;
+}
+
+.button {
+  width: 50%;
+  margin: 10px auto;
+}
