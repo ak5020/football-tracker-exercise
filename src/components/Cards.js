@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "../styles.css";
 
 const data = [
@@ -9,12 +9,20 @@ const data = [
 ];
 
 function Cards(props) {
-  // useEffect(() => {
-  //   fetch("https://jsonplaceholder.typicode.com/photos")
+  const [match, setMatch] = useState(null);
+  // const fetchFunc = () => {
+  //   const res = fetch("https://jsonplaceholder.typicode.com/photos")
   //   .then((res) => res.json())
-  //   .then((data) => console.log(data))
+  //   .then((res) => console.log(res))
   //   .catch((err) => console.error(err));
   // })
+
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/photos")
+      .then((res) => res.json())
+      .then((data) => setMatch(data))
+      .catch((err) => console.error(err));
+  });
 
   const addToFavorite = (item, key) => {
     if (item) {
@@ -24,8 +32,8 @@ function Cards(props) {
 
   return (
     <div className="cards d-flex">
-      {data.length ? (
-        data.map((item, key) => (
+      {match &&
+        match.map((item, key) => (
           <div key={item.id} className="cards-items">
             <div className="d-flex flex-column">
               <strong>{item.title}</strong>
@@ -56,10 +64,7 @@ function Cards(props) {
               </div>
             </div>
           </div>
-        ))
-      ) : (
-        <div>Loading</div>
-      )}
+        ))}
     </div>
   );
 }
