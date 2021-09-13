@@ -1,25 +1,44 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .App {
-  background-color: lightgrey;
-}
-
-/* Cards */
-
-.cards {
-  flex-flow: wrap;
-}
-
-.cards-items {
-  width: 450px;
-  height: 200px;
-  border: 1px solid #fff;
   background: #222326;
-  color: #fff;
-  border-radius: 10px;
-  text-align: center;
-  margin: 3rem auto;
+  height: 100%;
 }
 
-.button {
-  width: 50%;
-  margin: 10px auto;
+.header-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: lightgreen;
+}
+
+.movieList-div {
+  /* overflow-y: hidden;
+  max-height: 430px;
+  overflow-x: auto; */
+  /* display: flex; */
+  color: #fff;
+  height: 554px;
+  overflow: auto;
+  color: #fff;
+}
+
+.img-card {
+  width: 20%;
+  height: 150px;
+  margin: 1rem 0;
+  border: 1px solid orange;
+}
+
+svg {
+  cursor: pointer;
+}
+
+svg.bi.bi-x {
+  background: burlywood;
+  color: red;
 }
